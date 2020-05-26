@@ -1,0 +1,23 @@
+{
+ "background": {"scripts": ["background.js"]},
+ "browser_action": {
+ "default_icon": "pocket2roam-128_x_128.png",
+ "default_title": "Pocket2Roam"
+ },
+ "name": "Pocket2Roam",
+ "description": "Export Pocket highlights into Roam",
+ "homepage_url": "https://github.com/greenmeen/pocket-to-roam",
+ "icons": {
+     "16": "pocket2roam-16_x_16.png",
+     "48": "pocket2roam-48_x_48.png",
+     "128": "pocket2roam-128_x_128.png" },
+ "permissions": [
+    "activeTab"
+ ],
+ "options_ui": {
+   "page": "options.html",
+   "open_in_tab": false
+ },
+ "version": "0.1",
+ "manifest_version": 2
+}

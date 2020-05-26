@@ -1,2 +1,2 @@
-# pocket-to-roam
- A Chrome extension to export Pocket highlights into Roam
+# Pocket2Roam
+ A Chrome extension to export Pocket highlights into Roam.

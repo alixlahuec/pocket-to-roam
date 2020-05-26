@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <style>
+        button {
+          height: 30px;
+          width: 30px;
+          outline: none;
+          margin: 10px;
+        }
+      </style>
+    </head>
+    <body>
+      <div>
+        <p>Specify formatting for export : </p>
+        <form>
+        <textarea id="user_formatting" rows="5" cols="50">
+          [{{Title}}]({{OriginalURL}})
+                  Pocket URL : {{PocketURL}}
+                  Written by:: {{Author}}
+                  Summary::
+                  [[Quotes]]
+                          {{Highlights}}
+        </textarea>
+        <br><br>
+        <input type="submit" value="Save">
+        </form>
+      </div>
+    </body>
+    <script src="options.js"></script>
+  </html>
