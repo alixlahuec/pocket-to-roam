@@ -23,12 +23,12 @@
   originalURL = originalURL.replace("%3A", ":");
   originalURL = originalURL.split("%2F").join("/");
 
-  let author = document.getElementsByClassName('css-acjdas').lastChild.nodeValue;
+  let author = document.getElementsByClassName('css-acjdas')[0].lastChild.nodeValue;
 
   let clips = clipsTextList.join("\n \t \t ");
 
-  let text = "["+title+"]("+originalURL+") [[Pocket-Clipper]]" + "\n \t " + "Written by::" + author + "\n \t " + "Pocket URL : " +location.href+ "\n \t " + "Summary::" + "\n \t " + "[[Quotes]]" + "\n \t \t " + clips;
+  let text = "["+title+"]("+originalURL+") [[Pocket-Clipper]]" + "\n \t " + "Written by:: " + author + "\n \t " + "Pocket URL : " +location.href+ "\n \t " + "Summary::" + "\n \t " + "[[Quotes]]" + "\n \t \t " + clips;
 
-  prompt("Press CTRL+C or CMD+C, then paste into Roam", ""+text)
+  prompt("Press CTRL+C or CMD+C, then paste into Roam", text);
 
 })()
