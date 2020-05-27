@@ -1,4 +1,7 @@
 (function(){
+
+// Retrieve all highlights in the text
+
   let highlightsList = document.getElementsByClassName('highlight');
 
   let annotationIDList = [];
@@ -17,6 +20,8 @@
     }
   }
 
+  // Retrieve article metadata : Title, Original URL, Author
+
   let title = document.title.replace("Pocket - ", "");
 
   let originalURL = document.querySelector('header').getElementsByClassName('css-1890bmp')[0].lastChild.href.match("(?!^(.+)(url=))(http)(.+)(%3A%2F%2F)(.+)$")[0];
@@ -25,9 +30,11 @@
 
   let author = document.getElementsByClassName('css-acjdas')[0].lastChild.nodeValue;
 
-  let clips = clipsTextList.join("\n \t \t ");
+  // Custom Formatting Output
 
-  let text = "["+title+"]("+originalURL+") [[Pocket-Clipper]]" + "\n \t " + "Written by:: " + author + "\n \t " + "Pocket URL : " +location.href+ "\n \t " + "Summary::" + "\n \t " + "[[Quotes]]" + "\n \t \t " + clips;
+  let clips = clipsTextList.join("\n \t \t");
+
+  let text = "["+title+"]("+originalURL+") [[Pocket2Roam]]" + "\n \t " + "Written by:: " + author + "\n \t " + "Pocket URL : " +location.href+ "\n \t " + "Summary::" + "\n \t " + "[[Quotes]]" + "\n \t \t " + clips;
 
   prompt("Press CTRL+C or CMD+C, then paste into Roam", text);
 
