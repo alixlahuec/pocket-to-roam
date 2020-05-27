@@ -28,7 +28,13 @@
   originalURL = originalURL.replace("%3A", ":");
   originalURL = originalURL.split("%2F").join("/");
 
-  let author = document.getElementsByClassName('css-acjdas')[0].lastChild.nodeValue;
+let author = "";
+
+try{
+  author = document.getElementsByClassName('css-acjdas')[0].lastChild.nodeValue;
+} catch (e) {
+  author = "";
+}
 
   // Custom Formatting Output
 
