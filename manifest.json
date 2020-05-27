@@ -12,8 +12,8 @@
      "48": "pocket2roam-48_x_48.png",
      "128": "pocket2roam-128_x_128.png" },
  "permissions": [
-    "activeTab",
-    "storage"
+   "activeTab",
+    "clipboardWrite"
  ],
  "options_ui": {
    "page": "options.html",

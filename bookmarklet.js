@@ -34,8 +34,19 @@
 
   let clips = clipsTextList.join("\n \t \t");
 
-  let text = "["+title+"]("+originalURL+") [[Pocket2Roam]]" + "\n \t " + "Written by:: " + author + "\n \t " + "Pocket URL : " +location.href+ "\n \t " + "Summary::" + "\n \t " + "[[Quotes]]" + "\n \t \t " + clips;
+  let content = `[${title}](${originalURL}) - [[Pocket2Roam]]
+    Written by:: ${author}
+    Pocket URL : ${location.href}
+    Summary::
+    [[Quotes]]
+      ${clips}`
 
-  prompt("Press CTRL+C or CMD+C, then paste into Roam", text);
+  const tempTA = document.createElement("textarea");
+  document.body.appendChild(tempTA);
+  tempTA.value = content;
+  tempTA.select();
+  document.execCommand("copy");
+
+  alert("Highlights and metadata have been copied to the clipboard");
 
 })()
