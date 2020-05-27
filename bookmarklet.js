@@ -9,7 +9,7 @@
 
   for(i = 0; i < highlightsList.length; i++){
     let annotationID = highlightsList[i].attributes['annotation_id'].nodeValue;
-    let clipText = highlightsList[i].lastChild.nodeValue;
+    let clipText = highlightsList[i].lastChild.nodeValue.replace(/^\s+|\s+$/g, "");
 
     if(!annotationIDList.includes(annotationID)){
         annotationIDList.push(annotationID);
@@ -32,7 +32,10 @@
 
   // Custom Formatting Output
 
-  let clips = clipsTextList.join("\n \t \t");
+  for(i = 0; i < clipsTextList.length; i++){
+    clipsTextList[i] = clipsTextList[i].replace(/^\s+|\s+$/g, "");
+  }
+  let clips = clipsTextList.join("\n \t");
 
   let content = `[${title}](${originalURL}) - [[Pocket2Roam]]
     Written by:: ${author}
