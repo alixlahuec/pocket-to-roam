@@ -16,7 +16,7 @@
         clipsTextList.push(clipText);
     } else {
         let index = annotationIDList.lastIndexOf(annotationID);
-        clipsTextList[index] = clipsTextList[index].concat(clipText).split("\n").join(" ");
+        clipsTextList[index] = clipsTextList[index].concat(' '+clipText).split("\n").join(" ");
     }
   }
 
@@ -24,7 +24,7 @@
 
   let title = document.title.replace("Pocket - ", "");
 
-  let originalURL = document.querySelector('header').getElementsByClassName('css-1890bmp')[0].lastChild.href.match("(?!^(.+)(url=))(http)(.+)(%3A%2F%2F)(.+)$")[0];
+  let originalURL = document.querySelector('header').getElementsByClassName('css-1neb7j1')[0].href.match("(?!^(.+)(url=))(http)(.+)(%3A%2F%2F)(.+)$")[0];
   originalURL = originalURL.replace("%3A", ":");
   originalURL = originalURL.split("%2F").join("/");
 
