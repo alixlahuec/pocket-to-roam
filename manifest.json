@@ -15,10 +15,6 @@
    "activeTab",
     "clipboardWrite"
  ],
- "options_ui": {
-   "page": "options.html",
-   "open_in_tab": true
- },
- "version": "0.1",
+ "version": "0.2",
  "manifest_version": 2
 }
