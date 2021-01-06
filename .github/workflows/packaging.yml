@@ -10,14 +10,20 @@ jobs:
       - uses: actions/checkout@master
       - name: Zip Release
         run: zip -r pocket-to-roam.zip . -x "*.git*"
+      - name: Get extension version
+        id: version
+        uses: notiz-dev/github-action-json-property@release
+        with:
+          path: 'manifest.json'
+          prop_path: 'version'
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
+          tag_name: v${{steps.version.outputs.prop}}
+          release_name: Release of v${{steps.version.outputs.prop}}
           draft: true
       - name: Upload Release Asset
         id: upload-release-asset 
