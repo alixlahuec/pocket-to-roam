@@ -1,0 +1,15 @@
+name: "Package the extension into .zip release"
+on:
+  workflow_dispatch:
+  
+jobs:
+  packaging:
+    name: Packaging for archive release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Zip Release
+        uses: TheDoctor0/zip-release@master
+        with:
+          filename: 'pocket-to-roam.zip'
+          exclusions: '*.git*'
