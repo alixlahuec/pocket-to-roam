@@ -1,5 +1,7 @@
 ## Pocket2Roam
- A Chrome extension to export Pocket highlights into Roam.
+
+A Chrome extension to export Pocket highlights into Roam.
+If you're a regular user of both Pocket and Roam, you might be interested in the [weekly Pocket -> Roam import of unread items](https://github.com/greenmeen/pocket-weekly-archive) I use to manage my to-read list. 
  
  ### Installation
  
